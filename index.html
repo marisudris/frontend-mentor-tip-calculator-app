@@ -33,43 +33,38 @@
           <div class="input">
             <label class="input__label" for="bill">Bill</label>
             <div class="input__control input__control--money">
-              <input
-                class="input__box"
-                type="text"
-                id="bill"
-                placeholder="0"
-              />
+              <input class="input__box" type="text" id="bill" placeholder="0" />
             </div>
           </div>
 
           <fieldset class="input-group">
             <legend class="input__label">Select Tip %</legend>
             <div class="input__grid">
-              <label>
+              <button class="button" aria-pressed="false" value="0.05">
                 5%
-                <input type="radio" name="tip" value="0.05" />
-              </label>
-              <label>
+              </button>
+              <button class="button" aria-pressed="false" value="0.10">
                 10%
-                <input type="radio" name="tip" value="0.10" />
-              </label>
-              <label>
+              </button>
+              <button class="button" aria-pressed="false" value="0.15">
                 15%
-                <input type="radio" name="tip" value="0.15" />
-              </label>
-              <label>
+              </button>
+              <button class="button" aria-pressed="false" value="0.25">
                 25%
-                <input type="radio" name="tip" value="0.25" />
-              </label>
-              <label>
+              </button>
+              <button class="button" aria-pressed="false" value="0.50">
                 50%
-                <input type="radio" name="tip" value="0.50" />
-              </label>
-              <input
-                type="text"
-                placeholder="Custom"
-                aria-label="Custom percent tip"
-              />
+              </button>
+              <div class="input">
+                <div class="input__control input__control--grid-item">
+                  <input
+                    class="input__box"
+                    type="text"
+                    placeholder="Custom"
+                    aria-label="Custom percent tip"
+                  />
+                </div>
+              </div>
             </div>
           </fieldset>
 
