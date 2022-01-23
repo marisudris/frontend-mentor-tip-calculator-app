@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap");
+
+/** Resets **/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: bottom;
+}
+
+legend {
+  padding: 0;
+  display: table;
+}
+
+fieldset {
+  border: 0;
+  padding: 0;
+  margin: 0;
+  min-width: 0;
+}
+
+/** Styles **/
+:root {
+  --clr-strong-cyan: hsl(172, 67%, 45%);
+
+  --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-darker-grayish-cyan: hsl(186, 14%, 43%);
+  --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
+  --clr-light-grayish-cyan: hsl(185, 41%, 84%);
+  --clr-lighter-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-white: hsl(0, 0%, 100%);
+
+  --radius: 1.4em;
+  --radius-sm: 0.25em;
+}
+
+body {
+  font-family: "Space Mono", monospace;
+  background-color: var(--clr-light-grayish-cyan);
+}
+
+.header {
+  text-align: center;
+}
+
+.main {
+  display: grid;
+  row-gap: 40px;
+  place-content: center;
+  margin-top: 3.125em;
+}
+
+.logo {
+  justify-self: center;
+}
+
+.calculator {
+  padding: 2em;
+  background-color: var(--clr-white);
+  border-radius: var(--radius);
+}
+
+.inputs {
+  display: grid;
+  row-gap: 2.5em;
+}
+
+.input > * + *,
+.input-group > * + * {
+  margin-top: 0.4em;
+}
+
+.input__label {
+  color: var(--clr-darker-grayish-cyan);
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.input__control {
+  display: flex;
+  align-items: center;
+  padding: 0.8em 1.125em;
+  background-color: var(--clr-lighter-grayish-cyan);
+  border-radius: var(--radius-sm);
+}
+
+.input__control::before {
+  content: "";
+  background-repeat: no-repeat;
+}
+
+.input__control--money::before {
+  width: 11px;
+  height: 17px;
+  background-image: url(./images/icon-dollar.svg);
+}
+
+.input__control--people::before {
+  width: 13px;
+  height: 16px;
+  background-image: url(./images/icon-person.svg);
+}
+
+.input__control:focus-within {
+  outline: 2px solid var(--clr-strong-cyan);
+}
+
+.input__box {
+  color: var(--clr-very-dark-cyan);
+  font-family: "Space Mono", monospace;
+  font-size: 1.5rem;
+  font-weight: 700;
+  width: 0px;
+  flex: 1;
+  background: none;
+  border: none;
+  text-align: right;
+}
+
+.input__box:focus {
+  outline: 3px solid transparent;
+}
+
+/** Utility classes **/
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  opacity: 0;
+}

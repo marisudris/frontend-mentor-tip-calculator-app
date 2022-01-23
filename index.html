@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Frontend Mentor | Tip calculator app</title>
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header visually-hidden">
+      <h1 class="title">Splitter</h1>
+    </header>
+
+    <main class="main">
+      <img src="./images/logo.svg" alt="Logo - Splitter" class="logo" />
+      <div class="calculator">
+        <div class="inputs">
+          <div class="input">
+            <label class="input__label" for="bill">Bill</label>
+            <div class="input__control input__control--money">
+              <input
+                class="input__box"
+                type="text"
+                id="bill"
+                placeholder="0"
+              />
+            </div>
+          </div>
+
+          <fieldset class="input-group">
+            <legend class="input__label">Select Tip %</legend>
+            <div class="input__grid">
+              <label>
+                5%
+                <input type="radio" name="tip" value="0.05" />
+              </label>
+              <label>
+                10%
+                <input type="radio" name="tip" value="0.10" />
+              </label>
+              <label>
+                15%
+                <input type="radio" name="tip" value="0.15" />
+              </label>
+              <label>
+                25%
+                <input type="radio" name="tip" value="0.25" />
+              </label>
+              <label>
+                50%
+                <input type="radio" name="tip" value="0.50" />
+              </label>
+              <input
+                type="text"
+                placeholder="Custom"
+                aria-label="Custom percent tip"
+              />
+            </div>
+          </fieldset>
+
+          <div class="input">
+            <label class="input__label" for="people"> Number of People </label>
+            <div class="input__control input__control--people">
+              <input
+                class="input__box"
+                type="text"
+                id="people"
+                placeholder="0"
+              />
+            </div>
+          </div>
+        </div>
+        <div class="outputs">
+          <output class="output">
+            <span class="output__label">
+              <b class="input__label-accent"> Tip Amount </b>
+              / person
+            </span>
+          </output>
+
+          <output class="output">
+            <span class="output__label">
+              <b class="input__label-accent"> Total </b>
+              / person
+            </span>
+          </output>
+
+          <button class="button button-reset">Reset</button>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer visually-hidden">
+      <div class="attribution">
+        Challenge by
+        <a
+          class="attribution__link"
+          tabindex="-1"
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a tabindex="-1" href="#">Māris Ūdris</a>.
+      </div>
+    </footer>
+  </body>
+</html>
