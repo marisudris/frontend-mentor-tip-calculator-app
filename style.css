@@ -32,6 +32,7 @@ fieldset {
   --clr-strong-cyan: hsl(172, 67%, 45%);
 
   --clr-very-dark-cyan: hsl(183, 100%, 15%);
+  --clr-dark-cyan: hsl(183, 98%, 20%);
   --clr-darker-grayish-cyan: hsl(186, 14%, 43%);
   --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
   --clr-light-grayish-cyan: hsl(185, 41%, 84%);
@@ -54,7 +55,7 @@ body {
 .main {
   display: grid;
   row-gap: 40px;
-  place-content: center;
+  align-content: center;
   margin-top: 3.125em;
 }
 
@@ -63,6 +64,7 @@ body {
 }
 
 .calculator {
+  max-width: 57.5em;
   padding: 2em;
   background-color: var(--clr-white);
   border-radius: var(--radius);
@@ -147,11 +149,60 @@ body {
   color: var(--clr-white);
   font-family: "Space Mono", monospace;
   font-size: 1.5rem;
+  font-weight: 700;
   min-height: 2em;
   background: var(--clr-very-dark-cyan);
   border: none;
   border-radius: var(--radius-sm);
   cursor: pointer;
+  text-transform: uppercase;
+}
+
+.button-reset {
+  font-size: 1.25rem;
+  color: var(--clr-very-dark-cyan);
+  background: var(--clr-dark-cyan);
+  width: 100%;
+}
+
+.button-reset:enabled {
+  background: var(--clr-strong-cyan);
+}
+
+.outputs {
+  display: grid;
+  gap: 2em;
+  padding: 1.5em;
+  background: var(--clr-very-dark-cyan);
+  border-radius: var(--radius);
+}
+
+.outputs > *:last-child {
+  margin-top: auto;
+}
+
+.output {
+  display: flex;
+  justify-content: space-between;
+}
+
+.output__label {
+  display: flex;
+  flex-direction: column;
+  color: var(--clr-dark-grayish-cyan);
+  font-size: 0.8rem;
+  font-weight: 700;
+}
+
+.output__label-accent {
+  color: var(--clr-white);
+  font-size: 1rem;
+}
+
+.output__figure {
+  color: var(--clr-strong-cyan);
+  font-size: 2rem;
+  font-weight: 700;
 }
 
 /** Utility classes **/
