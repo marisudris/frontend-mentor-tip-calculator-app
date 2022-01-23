@@ -64,8 +64,12 @@ body {
 }
 
 .calculator {
+  display: grid;
+  gap: 2em 3em;
+  width: 100%;
   max-width: 57.5em;
   padding: 2em;
+  margin: 0 auto;
   background-color: var(--clr-white);
   border-radius: var(--radius);
 }
