@@ -33,6 +33,7 @@ fieldset {
 
   --clr-very-dark-cyan: hsl(183, 100%, 15%);
   --clr-dark-cyan: hsl(183, 98%, 20%);
+  --clr-light-cyan: hsl(172, 78%, 73%);
   --clr-darker-grayish-cyan: hsl(186, 14%, 43%);
   --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
   --clr-light-grayish-cyan: hsl(185, 41%, 84%);
@@ -160,17 +161,30 @@ body {
   border-radius: var(--radius-sm);
   cursor: pointer;
   text-transform: uppercase;
+  transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
+}
+
+.button[aria-pressed="true"] {
+  color: var(--clr-very-dark-cyan);
+  background: var(--clr-strong-cyan);
+}
+
+.button:hover,
+.button:focus {
+  color: var(--clr-very-dark-cyan);
+  background: var(--clr-light-cyan);
 }
 
 .button-reset {
   font-size: 1.25rem;
   color: var(--clr-very-dark-cyan);
-  background: var(--clr-dark-cyan);
+  background: var(--clr-strong-cyan);
   width: 100%;
 }
 
-.button-reset:enabled {
-  background: var(--clr-strong-cyan);
+.button-reset:disabled {
+  background: var(--clr-dark-cyan);
+  cursor: unset;
 }
 
 .outputs {
