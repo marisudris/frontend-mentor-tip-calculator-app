@@ -55,9 +55,10 @@ body {
 
 .main {
   display: grid;
-  row-gap: 40px;
+  row-gap: clamp(0.5em, 1em + 6vh, 5.5em);
   align-content: center;
-  margin-top: 3.125em;
+  min-height: 100vh;
+  padding: 3.125em 0;
 }
 
 .logo {
@@ -67,7 +68,7 @@ body {
 .calculator {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 2em 2.5em;
+  gap: 2em 1.5em;
   width: 100%;
   min-width: 0; /* Prevent grid blowout */
   max-width: 57.5em;
@@ -80,11 +81,10 @@ body {
 .inputs {
   display: grid;
   row-gap: 2.5em;
-  padding: 0.5em;
+  padding: clamp(0.5em, 2vw, 1em);
 }
 
-.input > * + *,
-.input-group > * + * {
+.input > * + * {
   margin-top: 0.4em;
 }
 
@@ -142,6 +142,10 @@ body {
 
 .input__box:focus {
   outline: 3px solid transparent;
+}
+
+.input-group > * + * {
+  margin-top: 1em;
 }
 
 .input__grid {
