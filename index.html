@@ -33,7 +33,13 @@
           <div class="input">
             <label class="input__label" for="bill">Bill</label>
             <div class="input__control input__control--money">
-              <input class="input__box" type="text" id="bill" placeholder="0" />
+              <input
+                class="input__box js-input-bill"
+                type="number"
+                min="0"
+                id="bill"
+                placeholder="0"
+              />
             </div>
           </div>
 
@@ -72,8 +78,9 @@
             <label class="input__label" for="people"> Number of People </label>
             <div class="input__control input__control--people">
               <input
-                class="input__box"
-                type="text"
+                class="input__box js-input-num-people"
+                type="number"
+                min="1"
                 id="people"
                 placeholder="0"
               />

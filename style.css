@@ -27,6 +27,15 @@ fieldset {
   min-width: 0;
 }
 
+input[type="number"],
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: textfield;
+  margin: 0;
+}
+
 /** Styles **/
 :root {
   --clr-strong-cyan: hsl(172, 67%, 45%);
@@ -171,15 +180,15 @@ body {
   transition: color 0.2s ease-in-out, background 0.2s ease-in-out;
 }
 
-.button[aria-pressed="true"] {
-  color: var(--clr-very-dark-cyan);
-  background: var(--clr-strong-cyan);
-}
-
 .button:hover,
 .button:focus {
   color: var(--clr-very-dark-cyan);
   background: var(--clr-light-cyan);
+}
+
+.button[aria-pressed="true"] {
+  color: var(--clr-very-dark-cyan);
+  background: var(--clr-strong-cyan);
 }
 
 .button-reset {
