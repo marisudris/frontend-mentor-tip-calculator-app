@@ -46,25 +46,45 @@
           <fieldset class="input-group">
             <legend class="input__label">Select Tip %</legend>
             <div class="input__grid">
-              <button class="button" aria-pressed="false" value="0.05">
+              <button
+                class="button js-input-tip"
+                aria-pressed="false"
+                value="0.05"
+              >
                 5%
               </button>
-              <button class="button" aria-pressed="false" value="0.10">
+              <button
+                class="button js-input-tip"
+                aria-pressed="false"
+                value="0.10"
+              >
                 10%
               </button>
-              <button class="button" aria-pressed="false" value="0.15">
+              <button
+                class="button js-input-tip"
+                aria-pressed="false"
+                value="0.15"
+              >
                 15%
               </button>
-              <button class="button" aria-pressed="false" value="0.25">
+              <button
+                class="button js-input-tip"
+                aria-pressed="false"
+                value="0.25"
+              >
                 25%
               </button>
-              <button class="button" aria-pressed="false" value="0.50">
+              <button
+                class="button js-input-tip"
+                aria-pressed="false"
+                value="0.50"
+              >
                 50%
               </button>
               <div class="input">
                 <div class="input__control input__control--grid-item">
                   <input
-                    class="input__box"
+                    class="input__box js-input-tip-field"
                     type="text"
                     placeholder="Custom"
                     aria-label="Custom percent tip"
@@ -93,7 +113,7 @@
               <b class="output__label-accent"> Tip Amount </b>
               / person
             </span>
-            <span class="output__figure">$0.00</span>
+            <span class="output__figure js-output-tip">$0.00</span>
           </output>
 
           <output class="output">
@@ -101,10 +121,10 @@
               <b class="output__label-accent"> Total </b>
               / person
             </span>
-            <span class="output__figure">$0.00</span>
+            <span class="output__figure js-output-total">$0.00</span>
           </output>
 
-          <button class="button button-reset" disabled>Reset</button>
+          <button class="button button-reset js-reset" disabled>Reset</button>
         </div>
       </div>
     </main>
@@ -121,5 +141,6 @@
         >. Coded by <a tabindex="-1" href="#">Māris Ūdris</a>.
       </div>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
