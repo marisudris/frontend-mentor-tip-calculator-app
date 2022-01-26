@@ -16,11 +16,7 @@ import {
 
 inputTip.forEach((tipButton) => {
     tipButton.addEventListener('click', (evt) => {
-        if (isToggled(evt)) {
-            untoggleAll();
-        } else {
-            toggleTipAMount(evt);
-        }
+        toggleTipAMount(evt);
         renderCalculation();
     });
 });

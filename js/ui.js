@@ -73,6 +73,10 @@ function renderCalculation() {
 }
 
 function toggleTipAMount(evt) {
+    if (isToggled(evt)) {
+        untoggleAll();
+        return;
+    }
     untoggleAll();
     evt.currentTarget.setAttribute('aria-pressed', 'true');
 }
