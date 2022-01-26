@@ -28,8 +28,8 @@ fieldset {
 }
 
 input[type="number"],
-input[type=number]::-webkit-inner-spin-button,
-input[type=number]::-webkit-outer-spin-button {
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: textfield;
@@ -124,7 +124,7 @@ body {
   height: 100%;
 }
 
-.input--invalid .input__control{
+.input--invalid .input__control {
   outline: 2px solid var(--clr-orange);
 }
 
