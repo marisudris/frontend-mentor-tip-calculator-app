@@ -42,6 +42,7 @@ input[type="number"]::-webkit-outer-spin-button {
 
   --clr-very-dark-cyan: hsl(183, 100%, 15%);
   --clr-dark-cyan: hsl(183, 98%, 20%);
+  --clr-cyan: hsl(183, 27%, 45%);
   --clr-light-cyan: hsl(172, 78%, 73%);
   --clr-darker-grayish-cyan: hsl(186, 14%, 43%);
   --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
@@ -88,6 +89,7 @@ body {
   margin: 0 auto;
   background-color: var(--clr-white);
   border-radius: var(--radius);
+  box-shadow: 0 20px 80px -50px var(--clr-cyan);
 }
 
 .inputs {
