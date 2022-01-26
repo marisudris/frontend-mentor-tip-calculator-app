@@ -38,7 +38,7 @@ function isMarkedInvalid(inputBox) {
     return input.classList.contains('input--invalid');
 }
 
-function renderCalculation() {
+function gatherInputs() {
     const amount = Number(inputBill.value);
     let tipFraction = [...inputTip].reduce((prev, curr) => {
         return curr.getAttribute('aria-pressed') === 'true'
@@ -49,6 +49,12 @@ function renderCalculation() {
         tipFraction = Number(inputTipField.value) / 100;
     }
     const numPeople = Number(inputNumPeople.value);
+
+    return { amount, tipFraction, numPeople };
+}
+
+function renderCalculation() {
+    const { amount, tipFraction, numPeople } = gatherInputs();
     if (!inputsAreValid({ amount, tipFraction, numPeople })) {
         disableReset();
         return;
