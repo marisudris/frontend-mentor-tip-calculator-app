@@ -114,7 +114,7 @@ body {
 .input__control {
   display: flex;
   align-items: center;
-  padding: 0.5em 1.125em;
+  padding: 0.4em 1.2em;
   background-color: var(--clr-lighter-grayish-cyan);
   border-radius: var(--radius-sm);
 }
@@ -210,6 +210,7 @@ body {
 .button-reset {
   font-size: 1.25rem;
   color: var(--clr-very-dark-cyan);
+  min-height: 2.5em;
   background: var(--clr-strong-cyan);
   width: 100%;
 }
@@ -220,9 +221,10 @@ body {
 }
 
 .outputs {
-  display: grid;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   gap: 1.5em;
-  align-items: start;
   padding: clamp(1.5em, 4vw, 2.5em);
   background: var(--clr-very-dark-cyan);
   border-radius: var(--radius);
