@@ -65,10 +65,11 @@ body {
 
 .main {
   display: grid;
-  row-gap: clamp(0.5em, 1em + 6vh, 5.5em);
-  align-content: center;
+  row-gap: clamp(0.5em, 0.5em + 8vh, 5.6em);
+  align-content: start;
   min-height: 100vh;
   padding: 3.125em 0;
+  padding-top: clamp(4.75em, 13vw, 10.125em);
 }
 
 .logo {
