@@ -47,6 +47,7 @@ input[type=number]::-webkit-outer-spin-button {
   --clr-dark-grayish-cyan: hsl(184, 14%, 56%);
   --clr-light-grayish-cyan: hsl(185, 41%, 84%);
   --clr-lighter-grayish-cyan: hsl(189, 41%, 97%);
+  --clr-orange: hsl(13, 51%, 59%);
   --clr-white: hsl(0, 0%, 100%);
 
   --radius: 1.4em;
@@ -98,9 +99,15 @@ body {
 }
 
 .input__label {
+  display: flex;
+  justify-content: space-between;
   color: var(--clr-darker-grayish-cyan);
   font-size: 0.9rem;
   font-weight: 700;
+}
+
+.input__warning {
+  color: var(--clr-orange);
 }
 
 .input__control {
@@ -114,6 +121,10 @@ body {
 .input__control--grid-item {
   padding-block: 0;
   height: 100%;
+}
+
+.input--invalid .input__control{
+  outline: 2px solid var(--clr-orange);
 }
 
 .input__control::before {
@@ -135,6 +146,10 @@ body {
 
 .input__control:focus-within {
   outline: 2px solid var(--clr-strong-cyan);
+}
+
+.input--invalid .input__control:focus-within {
+  outline: 2px solid var(--clr-orange);
 }
 
 .input__box {
@@ -220,6 +235,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  overflow: hidden;
 }
 
 .output__label {
