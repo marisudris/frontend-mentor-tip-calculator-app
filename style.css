@@ -51,6 +51,7 @@ input[type="number"]::-webkit-outer-spin-button {
   --clr-white: hsl(0, 0%, 100%);
 
   --radius: 1.4em;
+  --radius-md: 1em;
   --radius-sm: 0.25em;
 }
 
@@ -103,7 +104,7 @@ body {
   display: flex;
   justify-content: space-between;
   color: var(--clr-darker-grayish-cyan);
-  font-size: 0.9rem;
+  font-size: 1rem;
   font-weight: 700;
 }
 
@@ -227,7 +228,7 @@ body {
   gap: 1.5em;
   padding: clamp(1.5em, 4vw, 2.5em);
   background: var(--clr-very-dark-cyan);
-  border-radius: var(--radius);
+  border-radius: var(--radius-md);
 }
 
 .outputs > *:last-child {
