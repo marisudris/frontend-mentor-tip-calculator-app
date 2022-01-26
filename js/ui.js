@@ -46,7 +46,7 @@ function gatherInputs() {
             : prev;
     }, null);
     if (tipFraction === null) {
-        tipFraction = Number(inputTipField.value) / 100;
+        tipFraction = Number(inputTipField.value) / 100 || 0;
     }
     const numPeople = Number(inputNumPeople.value);
 
@@ -75,6 +75,10 @@ function renderCalculation() {
 function toggleTipAMount(evt) {
     untoggleAll();
     evt.currentTarget.setAttribute('aria-pressed', 'true');
+}
+
+function isToggled(evt) {
+    return evt.currentTarget.getAttribute('aria-pressed') === 'true';
 }
 
 function untoggleAll() {
@@ -108,6 +112,7 @@ export {
     isMarkedInvalid,
     renderCalculation,
     toggleTipAMount,
+    isToggled,
     untoggleAll,
     resetAll,
 };

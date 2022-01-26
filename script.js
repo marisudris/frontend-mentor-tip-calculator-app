@@ -9,13 +9,18 @@ import {
 import {
     renderCalculation,
     toggleTipAMount,
+    isToggled,
     untoggleAll,
     resetAll,
 } from './js/ui.js';
 
 inputTip.forEach((tipButton) => {
     tipButton.addEventListener('click', (evt) => {
-        toggleTipAMount(evt);
+        if (isToggled(evt)) {
+            untoggleAll();
+        } else {
+            toggleTipAMount(evt);
+        }
         renderCalculation();
     });
 });
