@@ -41,7 +41,8 @@ input[type="number"]::-webkit-outer-spin-button {
   --clr-strong-cyan: hsl(172, 67%, 45%);
 
   --clr-very-dark-cyan: hsl(183, 100%, 15%);
-  --clr-dark-cyan: hsl(183, 98%, 20%);
+  --clr-darker-cyan: 	hsl(183, 94%, 20%);
+  --clr-dark-cyan: hsl(183, 79%, 24%);
   --clr-cyan: hsl(183, 27%, 45%);
   --clr-light-cyan: hsl(172, 78%, 73%);
   --clr-darker-grayish-cyan: hsl(186, 14%, 43%);
@@ -226,6 +227,7 @@ body {
 }
 
 .button-reset:disabled {
+  color: var(--clr-darker-cyan);
   background: var(--clr-dark-cyan);
   cursor: unset;
 }
