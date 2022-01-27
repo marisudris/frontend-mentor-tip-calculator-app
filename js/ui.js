@@ -44,6 +44,7 @@ function markDirty(elem) {
 
 function markClean(elem) {
     elem.dataset.dirty = 'false';
+    markValid(elem);
 }
 
 function isClean(elem) {
@@ -71,7 +72,6 @@ function renderCalculation() {
     }
     const { amount, tipFraction, numPeople } = gatherInputs();
     if (!inputsAreValid({ amount, tipFraction, numPeople })) {
-        disableReset();
         return;
     }
     outputTip.textContent = `$${calculateTipPerPerson(
