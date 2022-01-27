@@ -180,6 +180,10 @@ body {
   margin-right: 0.5em;
 }
 
+.input__control--grid-item .input__box::placeholder {
+  color: var(--clr-darker-cyan);
+}
+
 .input__box:focus {
   outline: 3px solid transparent;
 }
