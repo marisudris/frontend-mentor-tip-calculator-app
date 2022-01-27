@@ -72,7 +72,7 @@ body {
   align-content: start;
   min-height: 100vh;
   padding: 3.125em 0;
-  padding-top: clamp(4.75em, 13vw, 10.125em);
+  padding-top: clamp(4.75em, 16.5vh, 10.125em);
 }
 
 .logo {
