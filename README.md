@@ -31,8 +31,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [GitHub]()
-- Live Site URL: [GitHub Pages]()
+- Solution URL: [GitHub](https://github.com/marisudris/frontend-mentor-tip-calculator-app)
+- Live Site URL: [GitHub Pages](https://marisudris.github.io/frontend-mentor-tip-calculator-app/)
 
 ## My process
 
@@ -54,7 +54,7 @@ It's probably worth exploring some JS frameworks & form validation packages.
 
 ### Useful resources
 
-- [WAI-ARIA](https://www.digitala11y.com) - Helpful reseource on ARIA.
+- [WAI-ARIA](https://www.digitala11y.com) - Helpful resource on ARIA.
 
 ## Author
 
