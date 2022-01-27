@@ -44,7 +44,9 @@ function markDirty(elem) {
 
 function markClean(elem) {
     elem.dataset.dirty = 'false';
-    markValid(elem);
+    if (isMarkedInvalid(elem)) {
+        markValid(elem);
+    }
 }
 
 function isClean(elem) {
