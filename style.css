@@ -98,18 +98,20 @@ body {
   padding: clamp(0.5em, 2vw, 1em);
 }
 
-.input > * + * {
-  margin-top: 0.4em;
-}
-
 .input__label {
   display: flex;
   justify-content: space-between;
   color: var(--clr-darker-grayish-cyan);
   font-size: 1rem;
   font-weight: 700;
+  margin-bottom: 0.65em;
   line-height: 1; /* for easier spacing calculations */
 }
+
+.input-group .input__label {
+  margin-bottom: 1.2em;
+}
+
 
 .input__warning {
   color: var(--clr-orange);
@@ -179,10 +181,6 @@ body {
 
 .input__box:focus {
   outline: 3px solid transparent;
-}
-
-.input-group > * + * {
-  margin-top: 1em;
 }
 
 .input__grid {
