@@ -51,7 +51,7 @@ input[type="number"]::-webkit-outer-spin-button {
   --clr-orange: hsl(13, 51%, 59%);
   --clr-white: hsl(0, 0%, 100%);
 
-  --radius: 1.4em;
+  --radius: 1.5em;
   --radius-md: 1em;
   --radius-sm: 0.25em;
 }
@@ -81,7 +81,7 @@ body {
 .calculator {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(20em, 1fr));
-  gap: 2em 1.5em;
+  gap: 2em;
   width: 100%;
   min-width: 0; /* Prevent grid blowout */
   max-width: 57.5em;
@@ -108,6 +108,7 @@ body {
   color: var(--clr-darker-grayish-cyan);
   font-size: 1rem;
   font-weight: 700;
+  line-height: 1; /* for easier spacing calculations */
 }
 
 .input__warning {
@@ -123,7 +124,7 @@ body {
 }
 
 .input__control--grid-item {
-  padding-block: 0;
+  padding: 0;
   height: 100%;
 }
 
@@ -179,7 +180,7 @@ body {
 .input__grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(7em, 1fr));
-  gap: 1em;
+  gap: 1em 0.875em;
 }
 
 .button {
