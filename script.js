@@ -9,7 +9,7 @@ import {
 import {
     renderCalculation,
     toggleTipAMount,
-    isToggled,
+    markDirty,
     untoggleAll,
     resetAll,
 } from './js/ui.js';
@@ -22,6 +22,9 @@ inputTip.forEach((tipButton) => {
 });
 
 inputTipField.addEventListener('input', untoggleAll);
+inputNumPeople.addEventListener('input', () => {
+    markDirty(inputNumPeople);
+});
 
 [inputBill, inputNumPeople, inputTipField].forEach((elem) =>
     elem.addEventListener('input', renderCalculation)

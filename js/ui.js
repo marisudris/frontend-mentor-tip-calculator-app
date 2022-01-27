@@ -38,6 +38,18 @@ function isMarkedInvalid(inputBox) {
     return input.classList.contains('input--invalid');
 }
 
+function markDirty(elem) {
+    elem.dataset.dirty = 'true';
+}
+
+function markClean(elem) {
+    elem.dataset.dirty = 'false';
+}
+
+function isClean(elem) {
+    return elem.dataset.dirty === 'false';
+}
+
 function gatherInputs() {
     const amount = Number(inputBill.value);
     let tipFraction = [...inputTip].reduce((prev, curr) => {
@@ -54,6 +66,9 @@ function gatherInputs() {
 }
 
 function renderCalculation() {
+    if (isClean(inputNumPeople)) {
+        return;
+    }
     const { amount, tipFraction, numPeople } = gatherInputs();
     if (!inputsAreValid({ amount, tipFraction, numPeople })) {
         disableReset();
@@ -103,6 +118,7 @@ function resetAll() {
     [inputBill, inputTipField, inputNumPeople].forEach(
         (input) => (input.value = '')
     );
+    markClean(inputNumPeople);
     untoggleAll();
     [outputAmount, outputTip].forEach(
         (output) => (output.textContent = '$0.00')
@@ -114,6 +130,7 @@ export {
     markInvalid,
     markValid,
     isMarkedInvalid,
+    markDirty,
     renderCalculation,
     toggleTipAMount,
     isToggled,
