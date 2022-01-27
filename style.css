@@ -169,6 +169,14 @@ body {
   text-align: right;
 }
 
+.input__box::placeholder {
+  color: var(--clr-dark-grayish-cyan);
+}
+
+.input__control--grid-item .input__box {
+  margin-right: 0.5em;
+}
+
 .input__box:focus {
   outline: 3px solid transparent;
 }
